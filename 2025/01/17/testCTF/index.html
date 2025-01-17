@@ -26,12 +26,12 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="HTTP协议总结1.X-Forwarded-For是一个 HTTP 扩展头部，主要是为了让 Web 服务器获取访问用户的真实 IP 地址 2.RefererReferer 是 HTTP 请求header 的一部分，当浏览器（或者模拟浏览器行为）向web 服务器发送请求的时候，头信息里有包含 Referer 。比如我在www.sojson.com 里有一个www.baidu.com 链接，那么点击这">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/2025/01/17/testCTF/%E6%B8%97%E9%80%8F%E5%AD%A6%E4%B9%A0/%E7%9F%A5%E8%AF%86/%E8%AF%AD%E9%9B%80/blog/source_posts/testCTF/image-20231106222717419.png">
+<meta property="og:image" content="http://example.com/2025/01/17/testCTF/imgs/testCTF/image-20231106222717419.png">
 <meta property="article:published_time" content="2025-01-17T11:27:02.000Z">
-<meta property="article:modified_time" content="2025-01-17T11:32:28.917Z">
+<meta property="article:modified_time" content="2025-01-17T11:48:14.153Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/2025/01/17/testCTF/%E6%B8%97%E9%80%8F%E5%AD%A6%E4%B9%A0/%E7%9F%A5%E8%AF%86/%E8%AF%AD%E9%9B%80/blog/source_posts/testCTF/image-20231106222717419.png">
+<meta name="twitter:image" content="http://example.com/2025/01/17/testCTF/imgs/testCTF/image-20231106222717419.png">
   
   
   
@@ -281,8 +281,8 @@
 <h2 id="2-Referer"><a href="#2-Referer" class="headerlink" title="2.Referer"></a>2.Referer</h2><p>Referer 是 HTTP 请求header 的一部分，当浏览器（或者模拟浏览器行为）向web 服务器发送请求的时候，头信息里有包含 Referer 。比如我在<a target="_blank" rel="noopener" href="http://www.sojson.com/">www.sojson.com</a> 里有一个<a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a> 链接，那么点击这个<a target="_blank" rel="noopener" href="http://www.baidu.com/">www.baidu.com</a> ，它的header 信息里就有：</p>
 <p>Referer&#x3D;<a target="_blank" rel="noopener" href="https://www.sojson.com/">https://www.sojson.com</a></p>
 <p>由此可以看出来吧。它就是表示一个来源。看下图的一个请求的 Referer 信息</p>
+<p><img src="/2025/01/17/testCTF/imgs/testCTF/image-20231106222717419.png" srcset="/img/loading.gif" lazyload alt="image-20231106222717419"></p>
 <h2 id="3-SERVER-‘HTTP-O2TAKUXX’-”GiveMeFlag”"><a href="#3-SERVER-‘HTTP-O2TAKUXX’-”GiveMeFlag”" class="headerlink" title="3.$_SERVER[‘HTTP_O2TAKUXX’]&#x3D;&#x3D;”GiveMeFlag”"></a>3.$_SERVER[‘HTTP_O2TAKUXX’]&#x3D;&#x3D;”GiveMeFlag”</h2><p>代表我要在http头加一个协议O2TAKUXX: GiveMeFlag</p>
-<p><img src="渗透学习\知识\语雀\blog\source_posts\testCTF\image-20231106222717419.png" srcset="/img/loading.gif" lazyload alt="image-20231106222717419"></p>
 <h2 id="4-代理服务器"><a href="#4-代理服务器" class="headerlink" title="4.代理服务器"></a>4.代理服务器</h2><p>REMOTE_ADDR&#x3D;代理IP地址</p>
 <p>HTTP_VIA&#x3D;代理IP地址</p>
 <p>HTTP_X_FORWARDED_FOR&#x3D;您的IP地址</p>
