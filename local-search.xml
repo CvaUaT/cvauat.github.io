@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>testCTF2</title>
+    <link href="/2025/01/17/testCTF2/"/>
+    <url>/2025/01/17/testCTF2/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Core文件打开方式"><a href="#Core文件打开方式" class="headerlink" title="Core文件打开方式"></a>Core文件打开方式</h1><p>给的是一个.core结尾的文件，在Linux中，一个程序崩溃时，它一般会在指定目录下生成一个core文件。core文件仅仅是一个内存映象(同时加上调试信息)，主要是用来调试的。</p><p>格式：strings 文明名-n 6 。</p><p>-n参数限制为6表示至少输出长度为6的字符串，因为flag{}至少占6位，减少干扰，如图：</p><p><img src="/2025/01/17/testCTF2/imgs/image-20241010013554389.png" alt="image-20241010013554389"></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>testCTF</title>
     <link href="/2025/01/17/testCTF/"/>
     <url>/2025/01/17/testCTF/</url>
